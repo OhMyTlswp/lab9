@@ -1,0 +1,19 @@
+.drawer {
+  background-color: white;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  transition: 0.4s;
+  transform: translateX(-150%);
+  opacity: 0;
+}
+.drawer__active {
+  transform: translateX(0%);
+  opacity: 1;
+}

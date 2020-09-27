@@ -1,0 +1,44 @@
+.burger-button {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  transition: 0.4s;
+  cursor: pointer;
+  position: relative;
+}
+.burger-button__active .burger-button_line {
+  width: 0;
+  transform-origin: left;
+}
+.burger-button__active .burger-button_line::after {
+  transform: rotate(-45deg);
+}
+.burger-button__active .burger-button_line::before {
+  transform: rotate(45deg);
+}
+.burger-button_line {
+  width: 70%;
+  height: 2px;
+  background-color: black;
+  transition: 0.4s;
+}
+.burger-button_line::after {
+  content: '';
+  width: 70%;
+  height: 2px;
+  position: absolute;
+  background-color: black;
+  transform: translateY(-10px);
+  transition: 0.4s;
+}
+.burger-button_line::before {
+  content: '';
+  width: 70%;
+  height: 2px;
+  position: absolute;
+  background-color: black;
+  transform: translateY(10px);
+  transition: 0.4s;
+}
