@@ -10,7 +10,10 @@ import toggleDrawer from '../../actions/toggleDrawer';
 function Header() {
   return (
     <div className="header">
-      <Drawer active={state.isDrawerOpen} content={<LinkMenu links={state.links} />} />
+      <Drawer
+        active={state.isDrawerOpen}
+        content={<LinkMenu links={state.links} />}
+      />
       <BurgerButton active={state.isDrawerOpen} toggle={toggleDrawer} />
     </div>
   );

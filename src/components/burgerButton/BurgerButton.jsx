@@ -5,7 +5,13 @@ import PropTypes from 'prop-types';
 
 function BurgerButton({ toggle, active }) {
   return (
-    <button type="button" onClick={toggle} className={active ? 'burger-button burger-button__active' : 'burger-button'}>
+    <button
+      type="button"
+      onClick={toggle}
+      className={
+        active ? 'burger-button burger-button__active' : 'burger-button'
+      }
+    >
       <div className="burger-button_line" />
     </button>
   );
