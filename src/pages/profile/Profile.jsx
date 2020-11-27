@@ -1,7 +1,7 @@
 import React from 'react';
-import { view } from '@risingstack/react-easy-state';
-import Page from '../../components/page/Page';
-import './profile.css';
+import Page from '../../components/Page/Page';
+import './Profile.css';
+
 function Profile() {
   return (
     <Page>
@@ -9,4 +9,4 @@ function Profile() {
     </Page>
   );
 }
-export default view(Profile);
+export default Profile;

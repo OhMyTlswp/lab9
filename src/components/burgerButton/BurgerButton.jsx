@@ -1,15 +1,17 @@
 import React from 'react';
 import { view } from '@risingstack/react-easy-state';
-import './burgerButton.css';
+import './BurgerButton.css';
 import PropTypes from 'prop-types';
-function BurgerButton(props) {
+
+function BurgerButton({ toggle, active }) {
   return (
-    <div onClick={props.activate} className={props.active ? 'burger-button burger-button__active' : 'burger-button'}>
+    <button type="button" onClick={toggle} className={active ? 'burger-button burger-button__active' : 'burger-button'}>
       <div className="burger-button_line" />
-    </div>
+    </button>
   );
 }
 BurgerButton.propTypes = {
   active: PropTypes.bool.isRequired,
+  toggle: PropTypes.func.isRequired,
 };
 export default view(BurgerButton);

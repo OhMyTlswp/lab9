@@ -1,13 +1,13 @@
 import React from 'react';
-import { view } from '@risingstack/react-easy-state';
 import PropTypes from 'prop-types';
-import './drawer.css';
-function Drawer(props) {
-  return <div className={props.active ? 'drawer drawer__active' : 'drawer'}>{props.content}</div>;
+import './Drawer.css';
+
+function Drawer({ active, content }) {
+  return <div className={active ? 'drawer drawer__active' : 'drawer'}>{content}</div>;
 }
 
 Drawer.propTypes = {
   active: PropTypes.bool.isRequired,
   content: PropTypes.element.isRequired,
 };
-export default view(Drawer);
+export default Drawer;

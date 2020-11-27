@@ -1,7 +1,7 @@
 import React from 'react';
-import { view } from '@risingstack/react-easy-state';
-import './dashboard.css';
-import Page from '../../components/page/Page';
+import './Dashboard.css';
+import Page from '../../components/Page/Page';
+
 function Dashboard() {
   return (
     <Page>
@@ -9,4 +9,4 @@ function Dashboard() {
     </Page>
   );
 }
-export default view(Dashboard);
+export default Dashboard;

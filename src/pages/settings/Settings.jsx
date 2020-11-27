@@ -1,7 +1,7 @@
 import React from 'react';
-import { view } from '@risingstack/react-easy-state';
-import Page from '../../components/page/Page';
-import './settings.css';
+import Page from '../../components/Page/Page';
+import './Settings.css';
+
 function Settings() {
   return (
     <Page>
@@ -9,4 +9,4 @@ function Settings() {
     </Page>
   );
 }
-export default view(Settings);
+export default Settings;

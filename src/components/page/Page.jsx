@@ -1,7 +1,12 @@
 import React from 'react';
-import { view } from '@risingstack/react-easy-state';
-import './page.css';
-function Page(props) {
-  return <div className="page">{props.children}</div>;
+import './Page.css';
+import PropTypes from 'prop-types';
+
+function Page({ children }) {
+  return <div className="page">{children}</div>;
 }
-export default view(Page);
+
+Page.propTypes = {
+  children: PropTypes.func.isRequired,
+};
+export default Page;

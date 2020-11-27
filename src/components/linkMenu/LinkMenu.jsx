@@ -1,21 +1,22 @@
 import React from 'react';
 import { view } from '@risingstack/react-easy-state';
-import './linkMenu.css';
-import PropTypes from 'prop-types';
+import './LinkMenu.css';
 import { NavLink } from 'react-router-dom';
-function LinkMenu(props) {
+import closeDrawer from '../../actions/closeDrawer';
+
+function LinkMenu() {
   return (
     <>
-      {props.links.map((link) => (
-        <NavLink key={link.key} to={link.url} activeClassName="link__active" className="link">
-          {link.name}
-        </NavLink>
-      ))}
+      <NavLink onClick={closeDrawer} to="/dashboard" activeClassName="link__active" className="link">
+        dashboard
+      </NavLink>
+      <NavLink onClick={closeDrawer} to="/profile" activeClassName="link__active" className="link">
+        profile
+      </NavLink>
+      <NavLink onClick={closeDrawer} to="/settings" activeClassName="link__active" className="link">
+        settings
+      </NavLink>
     </>
   );
 }
-
-LinkMenu.propTypes = {
-  links: PropTypes.array.isRequired,
-};
 export default view(LinkMenu);
